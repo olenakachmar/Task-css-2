@@ -1,0 +1,43 @@
+@media (min-width: 500px) {
+  .header {
+    &__select {
+      &-language {
+        &-dropdown {
+          width: 45px;
+        }
+      }
+
+      &-logo-image {
+        height: 20px;
+      }
+
+      &-cart {
+        font-size: 12px;
+        padding: 10px 30px;
+      }
+    }
+
+    .main {
+      &__photos-elem1-large {
+        grid-row: 1 / 5;
+      }
+
+      &__item-info {
+        &-review {
+          justify-content: flex-start;
+        }
+
+        .main__photos-elem2,
+        .main__photos-elem3,
+        .main__photos-elem4,
+        .main__photos-elem5 {
+          grid-row: 4;
+        }
+
+        &-wrapper {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@media (min-width: 850px) {
+  .main {
+    width: 80%;
+    flex-direction: row;
+    display: flex;
+    flex: 4;
+    grid-row: 1 / 5;
+
+    &__item-info {
+      flex: 1.7;
+      padding-left: 30px;
+    }
+
+    &__photos {
+      height: 950px;
+      grid-template-rows: repeat(3, 350px);
+
+      &-elem1 {
+        &-large {
+          height: 700px;
+        }
+      }
+
+      .main__item-info-social-wrapper-icon {
+        margin: 5px;
+      }
+    }
+  }
+}

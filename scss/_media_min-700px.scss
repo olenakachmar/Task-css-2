@@ -1,0 +1,13 @@
+@media (min-width: 700px) {
+  .main {
+    width: 80%;
+
+    &__photos {
+      flex: 2.3;
+    }
+
+    &__item-info-clear {
+      justify-content: flex-start;
+    }
+  }
+}

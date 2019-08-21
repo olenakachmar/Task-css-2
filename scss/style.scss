@@ -1,0 +1,365 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: $font;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  flex-direction: column;
+
+  &__advertisement {
+    width: 100%;
+    height: 20px;
+    background-color: $grey-color;
+    position: relative;
+    justify-content: center;
+
+    &-wrapper {
+      width: $screen-width;
+      justify-content: center;
+
+      &-quote {
+        color: $dark-grey;
+        font-size: 8px;
+        text-transform: uppercase;
+      }
+
+      &-cancel {
+        position: absolute;
+        left: 90%;
+      }
+    }
+  }
+
+  &__select {
+    width: $screen-width;
+    justify-content: space-between;
+    height: 90px;
+
+    &-language {
+      &-img {
+        width: 13px;
+        height: 10px;
+        margin: 5px;
+      }
+
+      &-dropdown {
+        width: 40px;
+        margin: 5px;
+      }
+    }
+
+    &-logo {
+      &-image {
+        height: 15px;
+        margin: 0 10px;
+      }
+    }
+
+    &-cart {
+      color: $black-color;
+      font-size: 10px;
+      text-transform: uppercase;
+      border: 1.5px solid $yellow-color;
+      padding: 5px 20px;
+
+      &:hover {
+        cursor: pointer;
+        background: $yellow-color; 
+      }
+
+      &:focus {
+        outline: none; }
+    }
+  }
+
+  .line {
+    width: 100%;
+    border: 0.4px solid $grey-color;
+  }
+
+  &__nav {
+    width: $screen-width;
+    justify-content: space-between;
+    height: 60px;
+
+    &-burger {
+      display: flex;
+      flex-grow: 1;
+      justify-content: end;
+
+      &-name {
+        color: $black-color;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 20px;
+      }
+    }
+
+    &-menu {
+      display: none;
+    }
+
+    &-search-like {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+
+      .vertical-line {
+        border-left: 0.8px solid $grey-color;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.main {
+  width: $screen-width;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+
+  &__photos {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(130px, auto);
+
+    &-elem1 {
+      grid-column: 1 / 5;
+      grid-row: 1 / 3;
+
+      &-large {
+        height: 300px;
+        width: 100%;
+      }
+    }
+
+    &-rest {
+      height: 100px;
+      width: 100%;
+    }
+
+    &-elem2 {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    &-elem3 {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    &-elem4 {
+      grid-column: 3;
+      grid-row: 3;
+    }
+
+    &-elem5 {
+      grid-column: 4;
+      grid-row: 3;
+
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    &-back-to {
+      color: $black-color;
+      text-decoration: none;
+      text-align: start;
+
+      &-highlight {
+        color: $blue-color-link;
+      }
+    }
+
+    &-name {
+      font-size: 20px;
+      margin: 30px 0 15px;
+    }
+
+    &-review {
+      justify-content: flex-start;
+      width: 100%;
+      margin: 0 0 30px;
+
+      &-stars {
+        margin: 5px;
+
+        &-star {
+          width: 13px;
+        }
+      }
+
+      &-count {
+        padding-right: 15px;
+        font-size: 14px;
+        border-right: 0.4px solid $grey-color;
+        margin: 5px;
+      }
+
+      &-add {
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-transform: uppercase;
+        margin: 5px;
+      }
+    }
+
+    &-price {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 0 0 15px;
+    }
+
+    &-properties {
+      font-size: 17px;
+      font-weight: bold;
+
+      &-prop {
+        margin: 5px 0;
+
+        &-value {
+          color: $blue-color-link;
+        }
+      }
+    }
+
+    &-description {
+      margin: 15px 0;
+      color: $light-grey;
+      font-size: 12px;
+      letter-spacing: 0.7px;
+      line-height: 19px;
+    }
+
+    &-list {
+      padding-left: 15px;
+      margin-bottom: 30px;
+
+      &-item {
+        padding-top: 5px;
+        color: $light-grey;
+      }
+    }
+
+    &-wrapper {
+      flex-direction: column;
+
+      &-select {
+        margin: 10px 10px 10px 0;
+        width: 100%;
+
+        &-title {
+          color: $black-color;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+
+        &-field {
+          width: 100%;
+          height: 30px;
+          border: 1px solid $white-color;
+          color: $light-grey;
+        }
+
+        &-item-qlt {
+          height: 30px;
+          border: 1px solid $white-color;
+          color: $light-grey;
+          padding-left: 10px;
+          width: 100%;
+        }
+      }
+    }
+
+    &-clear {
+      margin: 30px 0;
+      color: $black-color;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: underline;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-btn {
+      height: 100px;
+
+      &-1,
+      &-2 {
+        width: 50%;
+        height: 50px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      &-1 {
+        background-color: $black-color;
+        color: $white;
+        border: 1px solid $black-color;
+        margin-right: 20px;
+      }
+
+      &-2 {
+        border: 2px solid $grey-color;
+        color: $black-color;
+        background-color: $white;
+      }
+    }
+
+    &-social {
+      margin: 10px 0;
+      justify-content: space-evenly;
+
+      &-title {
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: bold;
+      }
+
+      &-wrapper {
+        flex-wrap: wrap;
+
+        &-icon {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  color: $light-grey;
+  font-size: 10px;
+
+  &__text {
+    font-size: 10px;
+  }
+}
+
+@import 'media_min-500px',
+'media_min-600px',
+'media_min-700px',
+'media_min-850px';

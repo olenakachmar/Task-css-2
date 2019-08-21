@@ -1,0 +1,32 @@
+@media (min-width: 600px) {
+  .header__nav {
+    &-burger-name {
+      display: none;
+    }
+
+    &-menu {
+      display: flex;
+      flex-grow: 4;
+      justify-content: space-between;
+      padding: 0 60px;
+      align-items: center;
+
+      &-item {
+        color: black;
+        font-family: Lato;
+        font-size: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover {
+          cursor: pointer;
+          background: $yellow-color;
+        }
+      }
+    }
+  }
+
+  .main__item-info-wrapper {
+    flex-direction: row;
+  }
+}

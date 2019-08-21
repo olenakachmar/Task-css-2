@@ -1,0 +1,17 @@
+@media (min-width: 900px) {
+  .container .main {
+    width: 80%;
+    flex-direction: row;
+    display: flex;
+    flex: 4;
+    grid-row: 1 / 5; }
+    .container .main .main__item-info {
+      flex: 1.7;
+      padding-left: 30px; }
+    .container .main .main__photos {
+      height: 950px;
+      grid-template-rows: repeat(3, 350px); }
+      .container .main .main__photos .main__photos-elem1 .main__photos-elem1-large {
+        height: 700px; }
+      .container .main .main__photos .main__item-info-social-wrapper-icon {
+        margin: 5px; } }
